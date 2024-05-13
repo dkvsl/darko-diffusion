@@ -7,7 +7,7 @@ variable "REGISTRY_USER" {
 }
 
 variable "APP" {
-    default = "darko-diffusion"
+    default = "stable-diffusion"
 }
 
 variable "RELEASE" {

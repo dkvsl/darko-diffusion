@@ -3,10 +3,10 @@
 # Docker image for A1111 Stable Diffusion Web UI, Kohya_ss, ComfyUI and InvokeAI
 
 [![GitHub Repo](https://img.shields.io/badge/github-repo-green?logo=github)](https://github.com/ashleykleynhans/stable-diffusion-docker)
-[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/ashleykza/stable-diffusion-webui?logo=docker&label=dockerhub&color=blue)](https://hub.docker.com/repository/docker/ashleykza/stable-diffusion-webui)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/ashleykza/stable-diffusion?logo=docker&label=dockerhub&color=blue)](https://hub.docker.com/repository/docker/ashleykza/stable-diffusion)
 [![RunPod.io Template](https://img.shields.io/badge/runpod_template-deploy-9b4ce6?logo=linuxcontainers&logoColor=9b4ce6)](https://runpod.io/gsc?template=ya6013lj5a&ref=2xxro4sy)
 <br>
-![Docker Pulls](https://img.shields.io/docker/pulls/ashleykza/stable-diffusion-webui?style=for-the-badge&logo=docker&label=Docker%20Pulls&link=https%3A%2F%2Fhub.docker.com%2Frepository%2Fdocker%2Fashleykza%2Fstable-diffusion-webui%2Fgeneral)
+![Docker Pulls](https://img.shields.io/docker/pulls/ashleykza/stable-diffusion?style=for-the-badge&logo=docker&label=Docker%20Pulls&link=https%3A%2F%2Fhub.docker.com%2Frepository%2Fdocker%2Fashleykza%2Fstable-diffusion-webui%2Fgeneral)
 ![Template Version](https://img.shields.io/github/v/tag/ashleykleynhans/stable-diffusion-docker?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjUuMywgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMDAwIDIwMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwMDAgMjAwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM2NzNBQjc7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMDE3Ljk1LDcxMS4wNGMtNC4yMiwyLjM2LTkuMTgsMy4wMS0xMy44NiwxLjgyTDM4Ni4xNyw1NTUuM2MtNDEuNzItMTAuNzYtODYuMDItMC42My0xMTYuNiwyOS43MwoJCQlsLTEuNCwxLjM5Yy0zNS45MiwzNS42NS0yNy41NSw5NS44LDE2Ljc0LDEyMC4zbDU4NC4zMiwzMjQuMjNjMzEuMzYsMTcuNCw1MC44Miw1MC40NSw1MC44Miw4Ni4zMnY4MDYuNzYKCQkJYzAsMzUuNDktMzguNDEsNTcuNjctNjkuMTUsMzkuOTRsLTcwMy4xNS00MDUuNjRjLTIzLjYtMTMuNjEtMzguMTMtMzguNzgtMzguMTMtNjYuMDJWNjY2LjYzYzAtODcuMjQsNDYuNDUtMTY3Ljg5LDEyMS45Mi0yMTEuNjYKCQkJTDkzMy44NSw0Mi4xNWMyMy40OC0xMy44LDUxLjQ3LTE3LjcsNzcuODMtMTAuODRsNzQ1LjcxLDE5NC4xYzMxLjUzLDguMjEsMzYuOTksNTAuNjUsOC41Niw2Ni41N0wxMDE3Ljk1LDcxMS4wNHoiLz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUyNy43NSw1MzYuMzhsMTI4Ljg5LTc5LjYzbDE4OS45MiwxMDkuMTdjMjcuMjQsMTUuNjYsNDMuOTcsNDQuNzMsNDMuODIsNzYuMTVsLTQsODU3LjYKCQkJYy0wLjExLDI0LjM5LTEzLjE1LDQ2Ljg5LTM0LjI1LDU5LjExbC03MDEuNzUsNDA2LjYxYy0zMi4zLDE4LjcxLTcyLjc0LTQuNTktNzIuNzQtNDEuOTJ2LTc5Ny40MwoJCQljMC0zOC45OCwyMS4wNi03NC45MSw1NS4wNy05My45Nmw1OTAuMTctMzMwLjUzYzE4LjIzLTEwLjIxLDE4LjY1LTM2LjMsMC43NS00Ny4wOUwxNTI3Ljc1LDUzNi4zOHoiLz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUyNC4wMSw2NjUuOTEiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K&logoColor=%23ffffff&label=Template%20Version&color=%23673ab7)
 
 </div>
@@ -22,7 +22,7 @@ Now with SDXL support.
 * xformers 0.0.23.post1
 * Jupyter Lab
 * [Automatic1111 Stable Diffusion Web UI](
-  https://github.com/AUTOMATIC1111/stable-diffusion-webui) 1.9.3
+  https://github.com/AUTOMATIC1111/stable-diffusion) 1.9.3
 * [Dreambooth extension](
   https://github.com/d8ahazard/sd_dreambooth_extension) 1.0.14
 * [ControlNet extension](
@@ -37,7 +37,7 @@ Now with SDXL support.
 * [Infinite Image Browsing extension](https://github.com/zanllp/sd-webui-infinite-image-browsing)
 * [CivitAI extension](https://github.com/civitai/sd_civitai_extension)
 * [CivitAI Browser+ extension](https://github.com/BlafKing/sd-civitai-browser-plus)
-* [TensorRT extension](https://github.com/NVIDIA/Stable-Diffusion-WebUI-TensorRT)
+* [TensorRT extension](https://github.com/NVIDIA/stable-diffusion-TensorRT)
 * [Kohya_ss](https://github.com/bmaltais/kohya_ss) v24.1.4
 * [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 * [ComfyUI Manager](https://github.com/ltdrdata/ComfyUI-Manager)
@@ -124,7 +124,7 @@ docker run -d \
   -p 9090:9090 \
   -e JUPYTER_PASSWORD=Jup1t3R! \
   -e ENABLE_TENSORBOARD=1 \
-  ashleykza/stable-diffusion-webui:latest
+  ashleykza/stable-diffusion:latest
 ```
 
 You can obviously substitute the image name and tag with your own.
@@ -146,7 +146,7 @@ You can obviously substitute the image name and tag with your own.
 
 | Variable             | Description                                  | Default                                 |
 |----------------------|----------------------------------------------|-----------------------------------------|
-| VENV_PATH            | Set the path for the Python venv for the app | /workspace/venvs/stable-diffusion-webui |
+| VENV_PATH            | Set the path for the Python venv for the app | /workspace/venvs/stable-diffusion |
 | JUPYTER_LAB_PASSWORD | Set a password for Jupyter lab               | not set - no password                   |
 | DISABLE_AUTOLAUNCH   | Disable Web UIs from launching automatically | enabled                                 |
 | ENABLE_TENSORBOARD   | Enables Tensorboard on port 6006             | enabled                                 |

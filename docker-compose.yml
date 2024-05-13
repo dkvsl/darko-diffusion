@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   stable-diffusion-webui:
-    image: ashleykza/stable-diffusion-webui:latest
+    image: ashleykza/stable-diffusion:latest
     deploy:
       resources:
         reservations:
