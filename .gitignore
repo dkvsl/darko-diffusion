@@ -1,2 +1,6 @@
 .DS_Store
 .safetensors
+sd_xl_base_1.0.safetensors
+cyberrealistic_v42.safetensors
+sdxl_vae.safetensors
+vae-ft-mse-840000-ema-pruned.safetensors

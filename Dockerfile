@@ -11,7 +11,7 @@ RUN mkdir -p /models
 #   wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
 COPY sd_xl_base_1.0.safetensors /models/sd_xl_base_1.0.safetensors
 COPY sdxl_vae.safetensors /models/sdxl_vae.safetensors
-COPY CyberRealistic_V4.2_FP16.safetensors /models/cyberealistic_v42.safetensors
+COPY cyberrealistic_v42.safetensors /models/cyberrealistic_v42.safetensors
 COPY vae-ft-mse-840000-ema-pruned.safetensors /models/vae-ft-mse-840000-ema-pruned.safetensors
 
 # Clone the git repo of the Stable Diffusion Web UI by Automatic1111

@@ -52,8 +52,8 @@ link_models() {
     if [[ ! -L /workspace/stable-diffusion/models/Stable-diffusion/sd_xl_base_1.0.safetensors ]]; then
         ln -s /models/sd_xl_base_1.0.safetensors /workspace/stable-diffusion/models/Stable-diffusion/sd_xl_base_1.0.safetensors
     fi
-    if [[ ! -L /workspace/stable-diffusion/models/Stable-diffusion/cyberealistic_v42.safetensors ]]; then
-        ln -s /models/cyberealistic_v42.safetensors /workspace/stable-diffusion/models/Stable-diffusion/cyberealistic_v42.safetensors
+    if [[ ! -L /workspace/stable-diffusion/models/Stable-diffusion/cyberrealistic_v42.safetensors ]]; then
+        ln -s /models/cyberrealistic_v42.safetensors /workspace/stable-diffusion/models/Stable-diffusion/cyberrealistic_v42.safetensors
     fi
     if [[ ! -L /workspace/stable-diffusion/models/VAE/sdxl_vae.safetensors ]]; then
         ln -s /models/sdxl_vae.safetensors /workspace/stable-diffusion/models/VAE/sdxl_vae.safetensors
