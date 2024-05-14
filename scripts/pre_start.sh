@@ -30,13 +30,9 @@ sync_apps() {
     rsync --remove-source-files -rlptDu /kohya_ss/ /workspace/kohya_ss/
     rm -rf /kohya_ss
 
-
     # Sync models
     echo "Syncing models to stable-diffusion..."
-    rsync --remove-source-files -rlptDu /models/sd_xl_base_1.0.safetensors /workspace/stable-diffusion/models/Stable-diffusion/
-    rsync --remove-source-files -rlptDu /models/sdxl_vae.safetensors /workspace/stable-diffusion/models/VAE/vae-mse-840000-ema.safetensors
-    rsync --remove-source-files -rlptDu /models/sdxl_vae.safetensors /workspace/stable-diffusion/models/VAE/
-    rsync --remove-source-files -rlptDu /models/CyberRealistic_V4.2_FP16.safetensors /workspace/stable-diffusion/models/Stable-diffusion/cyberrealistic_v42.safetensors
+    rsync --remove-source-files -rlptDu /models/ /workspace/models/
     rm -rf /models
 
     # Sync Application Manager to workspace to support Network volumes
@@ -56,6 +52,24 @@ fix_venvs() {
     /fix_venv.sh /kohya_ss/venv /workspace/kohya_ss/venv
 }
 
+link_models() {
+   # Link models and VAE if they are not already linked
+   if [[ ! -L /workspace/stable-diffusion/models/Stable-diffusion/sd_xl_base_1.0.safetensors ]]; then
+       ln -s /workspace/models/sd_xl_base_1.0.safetensors /workspace/stable-diffusion/models/Stable-diffusion/sd_xl_base_1.0.safetensors
+   fi
+
+   if [[ ! -L /workspace/stable-diffusion/models/Stable-diffusion/CyberRealistic_V4.2_FP16.safetensors ]]; then
+       ln -s /workspace/models/CyberRealistic_V4.2_FP16.safetensors /workspace/stable-diffusion-webui/models/Stable-diffusion/CyberRealistic_V4.2_FP16.safetensors
+   fi
+
+   if [[ ! -L /workspace/stable-diffusion/models/VAE/sdxl_vae.safetensors ]]; then
+       ln -s /workspace/models/sdxl_vae.safetensors /workspace/stable-diffusion-webui/models/VAE/sdxl_vae.safetensors
+   fi
+
+   if [[ ! -L /workspace/stable-diffusion/models/VAE/vae-ft-mse-840000-ema-pruned.safetensors ]]; then
+       ln -s /workspace/models/vae-ft-mse-840000-ema-pruned.safetensors /workspace/stable-diffusion-webui/models/VAE/vae-ft-mse-840000-ema-pruned.safetensors
+   fi
+}
 if [ "$(printf '%s\n' "$EXISTING_VERSION" "$TEMPLATE_VERSION" | sort -V | head -n 1)" = "$EXISTING_VERSION" ]; then
     if [ "$EXISTING_VERSION" != "$TEMPLATE_VERSION" ]; then
         sync_apps
