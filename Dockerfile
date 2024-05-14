@@ -18,7 +18,7 @@ COPY vae-ft-mse-840000-ema-pruned.safetensors /models/vae-ft-mse-840000-ema-prun
 # and set version
 ARG WEBUI_VERSION
 WORKDIR /
-RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion.git /stable-diffusion && \
+RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git /stable-diffusion && \
     cd /stable-diffusion && \
     git checkout tags/${WEBUI_VERSION}
 

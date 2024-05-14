@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export PYTHONUNBUFFERED=1
-export APP="stable-diffusion-webui"
+export APP="stable-diffusion
 DOCKER_IMAGE_VERSION_FILE="/workspace/${APP}/docker_image_version"
 
 echo "Template version: ${TEMPLATE_VERSION}"
@@ -35,6 +35,11 @@ sync_apps() {
     rsync --remove-source-files -rlptDu /app-manager/ /workspace/app-manager/
     rm -rf /app-manager
 
+    # Sync models to workspace
+    echo "Syncing models, please wait..."
+    rsync --remove-source-files -rlptDu /models/ /workspace/models/
+    rm -rf /models
+
     echo "${TEMPLATE_VERSION}" > ${DOCKER_IMAGE_VERSION_FILE}
     echo "${VENV_PATH}" > "/workspace/${APP}/venv_path"
 }
@@ -50,16 +55,16 @@ fix_venvs() {
 link_models() {
     # Link models and VAE if they are not already linked
     if [[ ! -L /workspace/stable-diffusion/models/Stable-diffusion/sd_xl_base_1.0.safetensors ]]; then
-        ln -s /models/sd_xl_base_1.0.safetensors /workspace/stable-diffusion/models/Stable-diffusion/sd_xl_base_1.0.safetensors
+        ln -s /workspace/models/sd_xl_base_1.0.safetensors /workspace/stable-diffusion/models/Stable-diffusion/sd_xl_base_1.0.safetensors
     fi
     if [[ ! -L /workspace/stable-diffusion/models/Stable-diffusion/cyberrealistic_v42.safetensors ]]; then
-        ln -s /models/cyberrealistic_v42.safetensors /workspace/stable-diffusion/models/Stable-diffusion/cyberrealistic_v42.safetensors
+        ln -s /workspace/models/cyberrealistic_v42.safetensors /workspace/stable-diffusion/models/Stable-diffusion/cyberrealistic_v42.safetensors
     fi
     if [[ ! -L /workspace/stable-diffusion/models/VAE/sdxl_vae.safetensors ]]; then
-        ln -s /models/sdxl_vae.safetensors /workspace/stable-diffusion/models/VAE/sdxl_vae.safetensors
+        ln -s /workspace/models/sdxl_vae.safetensors /workspace/stable-diffusion/models/VAE/sdxl_vae.safetensors
     fi
     if [[ ! -L /workspace/stable-diffusion/models/VAE/vae-ft-mse-840000-ema-pruned.safetensors ]]; then
-        ln -s /models/vae-ft-mse-840000-ema-pruned.safetensors /workspace/stable-diffusion/models/VAE/vae-ft-mse-840000-ema-pruned.safetensors
+        ln -s /workspace/models/vae-ft-mse-840000-ema-pruned.safetensors /workspace/stable-diffusion/models/VAE/vae-ft-mse-840000-ema-pruned.safetensors
     fi
  }
 

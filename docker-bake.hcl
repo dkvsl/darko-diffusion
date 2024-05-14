@@ -7,7 +7,7 @@ variable "REGISTRY_USER" {
 }
 
 variable "APP" {
-    default = "stable-diffusion"
+    default = "darko-diffusion"
 }
 
 variable "RELEASE" {
@@ -36,7 +36,7 @@ variable "TORCH_VERSION" {
 
 target "default" {
     dockerfile = "Dockerfile"
-    tags = ["${REGISTRY}/${REGISTRY_USER}/${APP}:${RELEASE}"]
+    tags = ["${REGISTRY}/${REGISTRY_USER}/${APP}+${TORCH_VERSION}+cu${CU_VERSION}":${RELEASE}"]
     args = {
         RELEASE = "${RELEASE}"
         BASE_IMAGE = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}"
