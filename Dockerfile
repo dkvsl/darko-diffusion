@@ -1,6 +1,15 @@
 ARG BASE_IMAGE
 FROM ${BASE_IMAGE}
 
+RUN mkdir -p /models && \
+    cd models
+
+# Add SDXL and SD15 models and VAE's
+RUN wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
+RUN wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors
+RUN wget https://huggingface.co/cyberdelia/CyberRealistic/resolve/main/CyberRealistic_V4.2_FP16.safetensors
+RUN wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
+
 # Clone the git repo of the Stable Diffusion Web UI by Automatic1111
 # and set version
 ARG WEBUI_VERSION
@@ -47,18 +56,9 @@ RUN source /venv/bin/activate && \
     pip3 install --no-cache-dir segment_anything lama_cleaner && \
     deactivate
 
-# Add SDXL and SD15 models and VAE's
-RUN wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors && \
-    wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors && \
-    wget https://huggingface.co/cyberdelia/CyberRealistic/resolve/main/CyberRealistic_V4.2_FP16.safetensors && \
-    wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
-COPY CyberRealistic_V4.2_FP16.safetensors /stable-diffusion/models/Stable-diffusion/cyberrealistic_v42.safetensors 
-COPY sd_xl_base_1.0.safetensors /stable-diffusion/models/Stable-diffusion/sd_xl_base_1.0.safetensors
-COPY sdxl_vae.safetensors /stable-diffusion/models/VAE/sdxl_vae.safetensors
-COPY vae-ft-mse-840000-ema-pruned.safetensors /stable-diffusion/models/VAE/vae-ft-mse-840000-ema-pruned.safetensors
-
 # Install Kohya_ss
 ARG KOHYA_VERSION
+WORKDIR /
 RUN git clone https://github.com/bmaltais/kohya_ss.git /kohya_ss && \
     cd /kohya_ss && \
     git checkout ${KOHYA_VERSION} && \

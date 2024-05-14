@@ -30,6 +30,15 @@ sync_apps() {
     rsync --remove-source-files -rlptDu /kohya_ss/ /workspace/kohya_ss/
     rm -rf /kohya_ss
 
+
+    # Sync models
+    echo "Syncing models to stable-diffusion..."
+    rsync --remove-source-files -rlptDu /models/sd_xl_base_1.0.safetensors /workspace/stable-diffusion/models/Stable-diffusion/
+    rsync --remove-source-files -rlptDu /models/sdxl_vae.safetensors /workspace/stable-diffusion/models/VAE/vae-mse-840000-ema.safetensors
+    rsync --remove-source-files -rlptDu /models/sdxl_vae.safetensors /workspace/stable-diffusion/models/VAE/
+    rsync --remove-source-files -rlptDu /models/CyberRealistic_V4.2_FP16.safetensors /workspace/stable-diffusion/models/Stable-diffusion/cyberrealistic_v42.safetensors
+    rm -rf /models
+
     # Sync Application Manager to workspace to support Network volumes
     echo "Syncing Application Manager to workspace, please wait..."
     rsync --remove-source-files -rlptDu /app-manager/ /workspace/app-manager/

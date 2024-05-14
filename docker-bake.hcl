@@ -19,11 +19,11 @@ variable "CU_VERSION" {
 }
 
 variable "BASE_IMAGE_REPOSITORY" {
-    default = "darkovisual/base-gpu"
+    default = "darkovisual/gpu-base-cuda11.8.0"
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "cuda11.8.0-torch2.1.2"
+    default = "latest"
 }
 
 variable "CUDA_VERSION" {
