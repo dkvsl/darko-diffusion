@@ -153,26 +153,12 @@ You can obviously substitute the image name and tag with your own.
 
 ## Logs
 
-Stable Diffusion Web UI, Kohya SS, and ComfyUI each create log
-files, and you can tail the log files instead of
-killing the services to view the logs
+Stable Diffusion, Kohya_ss and Jupyter Lab each create log
+files, and you can tail the log files instead of killing
+the services to view the logs
 
 | Application             | Log file                     |
 |-------------------------|------------------------------|
 | Stable Diffusion Web UI | /workspace/logs/webui.log    |
 | Kohya SS                | /workspace/logs/kohya_ss.log |
-| ComfyUI                 | /workspace/logs/comfyui.log  |
-| InvokeAI                | /workspace/logs/invokeai.log |
-
-## Community and Contributing
-
-Pull requests and issues on [GitHub](https://github.com/ashleykleynhans/stable-diffusion-docker)
-are welcome. Bug fixes and new features are encouraged.
-
-## Appreciate my work?
-
-<a href="https://www.buymeacoffee.com/ashleyk" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-# darko-diffusion
-# darko-diffusion
-# darko-diffusion
-# darko-diffusion
+| Jupyter Labs            | /workspace/logs/jupyter.log  |
