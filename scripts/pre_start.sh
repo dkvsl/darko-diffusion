@@ -107,6 +107,7 @@ then
     echo "   Kohya_ss"
     echo "   ---------------------------------------------"
     echo "   /start_kohya.sh"
+    echo ""
 
 else
     /start_a1111.sh
