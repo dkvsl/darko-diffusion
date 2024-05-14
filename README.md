@@ -44,8 +44,8 @@ Now with SDXL support.
 * [InvokeAI](https://github.com/invoke-ai/InvokeAI) v4.2.0
 * [sd_xl_base_1.0.safetensors](
   https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors)
-* [sd_xl_refiner_1.0.safetensors](
-  https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors)
+* [cyberrealistic_v42.safetensors](
+  https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/cyberrealistic_v42.safetensors)
 * [sdxl_vae.safetensors](
   https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors)
 * [inswapper_128.onnx](
@@ -87,7 +87,7 @@ cd stable-diffusion-docker
 wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
 wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
 wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
-wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
+wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/cyberrealistic_v42.safetensors
 wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors
 
 # Log in to Docker Hub

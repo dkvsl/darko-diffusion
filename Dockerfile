@@ -44,7 +44,7 @@ RUN source /venv/bin/activate && \
 # SDXL models result in OOM kills with 8GB system memory, need 30GB+ to cache these
 # RUN source /venv/bin/activate && \
 #     python3 cache-sd-model.py --no-half-vae --no-half --xformers --use-cpu=all --ckpt /models/sd_xl_base_1.0.safetensors && \
-#     python3 cache-sd-model.py --no-half-vae --no-half --xformers --use-cpu=all --ckpt /models/sd_xl_refiner_1.0.safetensors && \
+#     python3 cache-sd-model.py --no-half-vae --no-half --xformers --use-cpu=all --ckpt /models/cyberrealistic_v42.safetensors && \
 #     deactivate
 
 # Clone the Automatic1111 Extensions
