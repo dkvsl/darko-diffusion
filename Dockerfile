@@ -52,10 +52,10 @@ RUN wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve
     wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors && \
     wget https://huggingface.co/cyberdelia/CyberRealistic/resolve/main/CyberRealistic_V4.2_FP16.safetensors && \
     wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
- COPY CyberRealistic_V4.2_FP16.safetensors /stable-diffusion/models/Stable-diffusion/cyberrealistic_v42.safetensors
- COPY sd_xl_base_1.0.safetensors /stable-diffusion/models/Stable-diffusion/sd_xl_base_1.0.safetensors
- COPY sdxl_vae.safetensors /stable-diffusion/models/VAE/sdxl_vae.safetensors
- COPY vae-ft-mse-840000-ema-pruned.safetensors /stable-diffusion/models/VAE/vae-ft-mse-840000-ema-pruned.safetensors
+COPY CyberRealistic_V4.2_FP16.safetensors /stable-diffusion/models/Stable-diffusion/cyberrealistic_v42.safetensors 
+COPY sd_xl_base_1.0.safetensors /stable-diffusion/models/Stable-diffusion/sd_xl_base_1.0.safetensors
+COPY sdxl_vae.safetensors /stable-diffusion/models/VAE/sdxl_vae.safetensors
+COPY vae-ft-mse-840000-ema-pruned.safetensors /stable-diffusion/models/VAE/vae-ft-mse-840000-ema-pruned.safetensors
 
 # Install Kohya_ss
 ARG KOHYA_VERSION
