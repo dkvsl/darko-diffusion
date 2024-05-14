@@ -55,7 +55,7 @@ RUN git clone https://github.com/Mikubill/sd-webui-controlnet.git extensions/sd-
 # Install dependencies for ControlNet and Infinite Image Browsing,
 ARG CONTROLNET_COMMIT
 RUN source /venv/bin/activate && \
-    pip3 install basicsr && \
+    pip3 install --no-cache-dir basicsr && \
     cd /stable-diffusion/extensions/sd-webui-controlnet && \
     pip3 install -r requirements.txt && \
     cd /stable-diffusion/extensions/infinite-image-browsing && \
@@ -64,7 +64,7 @@ RUN source /venv/bin/activate && \
 
 # Install dependencies for inpaint anything extension
 RUN source /venv/bin/activate && \
-    pip3 install segment_anything lama_cleaner && \
+    pip3 install --no-cache-dir segment_anything lama_cleaner && \
     deactivate
 
 # Install Kohya_ss
@@ -83,14 +83,14 @@ RUN python3 -m venv --system-site-packages venv && \
     pip3 install bitsandbytes==0.43.0 \
         tensorboard==2.14.1 tensorflow==2.14.0 \
         wheel packaging tensorrt && \
-    pip3 install tensorflow[and-cuda] && \
+    pip3 install --no-cache-dir tensorflow[and-cuda] && \
     pip3 install -r requirements.txt && \
     pip3 cache purge && \
     deactivate
 
 # Install Tensorboard
 RUN pip3 uninstall -y tensorboard tb-nightly && \
-    pip3 install tensorboard==2.14.1 tensorflow==2.14.0
+    pip3 install --no-cache-dir tensorboard==2.14.1 tensorflow==2.14.0
 
 # Install Application Manager
 ARG APP_MANAGER_VERSION
@@ -127,6 +127,9 @@ COPY --chmod=755 scripts/* ./
 
 # Copy the accelerate configuration
 COPY kohya_ss/accelerate.yaml ./
+
+# Prune cache
+RUN rm -Rf /root/.cache/pip
 
 # Start the container
 SHELL ["/bin/bash", "--login", "-c"]
