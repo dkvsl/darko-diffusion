@@ -10,8 +10,8 @@ __pycache__
 .ruff_cache
 .cache
 
-# Exclude Python virtual environment
+# Exclude Python virtual environments
 /venv
+
 # Exclude models
 *.safetensors
-.DS_Store
