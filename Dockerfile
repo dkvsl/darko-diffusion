@@ -1,19 +1,6 @@
 ARG BASE_IMAGE
 FROM ${BASE_IMAGE}
 
-RUN mkdir -p /models
-
-# Add SDXL and SD15 models and VAE
-#   These need to already have been downloaded:
-#   wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
-#   wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors
-#   wget https://huggingface.co/cyberdelia/CyberRealistic/resolve/main/CyberRealistic_V4.2_FP16.safetensors
-#   wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
-COPY sd_xl_base_1.0.safetensors /models/sd_xl_base_1.0.safetensors
-COPY sdxl_vae.safetensors /models/sdxl_vae.safetensors
-COPY cyberrealistic_v42.safetensors /models/cyberrealistic_v42.safetensors
-COPY vae-ft-mse-840000-ema-pruned.safetensors /models/vae-ft-mse-840000-ema-pruned.safetensors
-
 # Clone the git repo of the Stable Diffusion Web UI by Automatic1111
 # and set version
 ARG WEBUI_VERSION
@@ -40,13 +27,6 @@ RUN source /venv/bin/activate && \
     python3 -m install-automatic --skip-torch-cuda-test && \
     deactivate
 
-# Cache the Stable Diffusion Models
-# SDXL models result in OOM kills with 8GB system memory, need 30GB+ to cache these
-# RUN source /venv/bin/activate && \
-#     python3 cache-sd-model.py --no-half-vae --no-half --xformers --use-cpu=all --ckpt /models/sd_xl_base_1.0.safetensors && \
-#     python3 cache-sd-model.py --no-half-vae --no-half --xformers --use-cpu=all --ckpt /models/cyberrealistic_v42.safetensors && \
-#     deactivate
-
 # Clone the Automatic1111 Extensions
 RUN git clone https://github.com/Mikubill/sd-webui-controlnet.git extensions/sd-webui-controlnet && \
     git clone --depth=1 https://github.com/zanllp/sd-webui-infinite-image-browsing.git extensions/infinite-image-browsing && \
@@ -66,6 +46,16 @@ RUN source /venv/bin/activate && \
 RUN source /venv/bin/activate && \
     pip3 install --no-cache-dir segment_anything lama_cleaner && \
     deactivate
+
+# Add SDXL and SD15 models and VAE's
+RUN wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors && \
+    wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors && \
+    wget https://huggingface.co/cyberdelia/CyberRealistic/resolve/main/CyberRealistic_V4.2_FP16.safetensors && \
+    wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
+ COPY CyberRealistic_V4.2_FP16.safetensors /stable-diffusion/models/Stable-diffusion/cyberrealistic_v42.safetensors
+ COPY sd_xl_base_1.0.safetensors /stable-diffusion/models/Stable-diffusion/sd_xl_base_1.0.safetensors
+ COPY sdxl_vae.safetensors /stable-diffusion/models/VAE/sdxl_vae.safetensors
+ COPY vae-ft-mse-840000-ema-pruned.safetensors /stable-diffusion/models/VAE/vae-ft-mse-840000-ema-pruned.safetensors
 
 # Install Kohya_ss
 ARG KOHYA_VERSION
