@@ -77,7 +77,7 @@ You can obviously substitute the image name and tag with your own.
 
 ### Environment Variables
 
-| Variable             | Description                                  | Default                                 |
+| Variables            | Description                                  | Default                                 |
 |----------------------|----------------------------------------------|-----------------------------------------|
 | VENV_PATH            | Set the path for the Python venv for the app | /workspace/venvs/stable-diffusion |
 | JUPYTER_LAB_PASSWORD | Set a password for Jupyter lab               | not set - no password                   |
