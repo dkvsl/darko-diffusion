@@ -1,8 +1,7 @@
 <div align="center">
 
 # Docker image for A1111 Stable Diffusion & Kohya_ss & JupyterLab
-
-[Release](https://img.shields.io/github/v/release/dkvsl/darko-diffusion?sort=semver&display_name=release&style=for-the-badge&logo=github&logoColor=white&logoSize=auto&labelColor=purple&color=black)
+![GitHub Release](https://img.shields.io/github/v/release/dkvsl/darko-diffusion?sort=semver&display_name=release&style=for-the-badge&logo=github&logoColor=white&logoSize=auto&labelColor=purple&color=black)
 
 [![Docker Image Version (latest semver)](https://img.shields.io/docker/v/ashleykza/stable-diffusion?logo=docker&label=dockerhub&color=blue)](https://hub.docker.com/repository/docker/ashleykza/stable-diffusion)
 [![RunPod.io Template](https://img.shields.io/badge/runpod_template-deploy-9b4ce6?logo=linuxcontainers&logoColor=9b4ce6)](https://runpod.io/gsc?template=ya6013lj5a&ref=2xxro4sy)
@@ -96,3 +95,6 @@ the services to view the logs
 | Stable Diffusion Web UI | /workspace/logs/webui.log    |
 | Kohya SS                | /workspace/logs/kohya_ss.log |
 | JupyterLab              | /workspace/logs/jupyter.log  |
+
+
+[[!Release](https://img.shields.io/github/v/release/dkvsl/darko-diffusion?sort=semver&display_name=release&style=for-the-badge&logo=github&logoColor=white&logoSize=auto&labelColor=purple&color=black)]: https://img.shields.io/github/v/release/dkvsl/darko-diffusion?sort=semver&display_name=release&style=for-the-badge&logo=github&logoColor=white&logoSize=auto&labelColor=purple&color=black
