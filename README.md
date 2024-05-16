@@ -94,4 +94,4 @@ the services to view the logs
 |-------------------------|------------------------------|
 | Stable Diffusion Web UI | /workspace/logs/webui.log    |
 | Kohya SS                | /workspace/logs/kohya_ss.log |
-| JupyterLab            | /workspace/logs/jupyter.log  |
+| JupyterLab              | /workspace/logs/jupyter.log  |
