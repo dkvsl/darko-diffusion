@@ -2,8 +2,8 @@
 
 # Docker image for A1111 Stable Diffusion & Kohya_ss & JupyterLab
 
-[[![GitHub Repo](https://img.shields.io/badge/github-repo-green?logo=github)](https://github.com/ashleykleynhans/stable-diffusion-docker)](https://img.shields.io/github/v/release/dkvsl/darko-diffusion?sort=semver&display_name=release&style=for-the-badge&logo=github&logoColor=white&logoSize=auto&labelColor=purple&color=black
-)
+[![Release](https://img.shields.io/github/v/release/dkvsl/darko-diffusion?sort=semver&display_name=release&style=for-the-badge&logo=github&logoColor=white&logoSize=auto&labelColor=purple&color=black)
+
 [![Docker Image Version (latest semver)](https://img.shields.io/docker/v/ashleykza/stable-diffusion?logo=docker&label=dockerhub&color=blue)](https://hub.docker.com/repository/docker/ashleykza/stable-diffusion)
 [![RunPod.io Template](https://img.shields.io/badge/runpod_template-deploy-9b4ce6?logo=linuxcontainers&logoColor=9b4ce6)](https://runpod.io/gsc?template=ya6013lj5a&ref=2xxro4sy)
 <br>
