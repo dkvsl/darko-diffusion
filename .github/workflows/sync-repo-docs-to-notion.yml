@@ -11,7 +11,7 @@ jobs:
         - name: sync repo docs to notions
           uses: pechorin/sync-repo-docs-to-notion@main
           env:
-            NOTION_TOKEN: ${{secret_uKpgUx3lA5TWO8UpduLgEy4FtGfWJ6p5QyTTfUM0ucJ}}
+            NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
             NOTION_ROOT_PAGE_ID: https://www.notion.so/danidarko/Docker-cf9261f68df84edbbac465037629cac2
             FOLDER: "${{ github.workspace }}"
             RELATIVE_URLS_ROOT: "${{ github.server_url }}/${{ github.repository }}"
