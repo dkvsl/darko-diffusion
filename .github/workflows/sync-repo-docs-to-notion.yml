@@ -24,3 +24,4 @@ jobs:
             RELATIVE_URLS_ROOT: "${{ github.server_url }}/${{ github.repository }}"
             IGNORE_CREATE_ERRORS: 1
             DEBUG: 1
+            
