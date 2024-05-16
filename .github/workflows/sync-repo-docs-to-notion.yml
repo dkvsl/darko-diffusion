@@ -1,7 +1,7 @@
 on:
     push:
       branches:
-        - master
+        - main
   jobs:
     notion_sync:
       timeout-minutes: 10
