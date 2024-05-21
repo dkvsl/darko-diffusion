@@ -26,19 +26,7 @@
 * [sdxl_vae.safetensors](
   https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors)
 
-## Running Locally
-
-> [**IMPORTANT**]
-> In order to cache the models, you will need at least 32GB of CPU/system
-> memory (not VRAM) due to the large size of the models.  If you have less
-> than 32GB of system memory, you can comment out or remove the code in the
-
-### Install Nvidia CUDA Driver
-
-- [Linux](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
-- [Windows](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html)
-
-### Start the Docker container
+### Running Locally
 
 ```bash
 docker run -d \
@@ -54,7 +42,6 @@ docker run -d \
   darkovisual/darko-diffusion:1.0.3
 ```
 
-You can obviously substitute the image name and tag with your own.
 
 ### Ports
 
