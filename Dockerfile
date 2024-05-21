@@ -25,14 +25,10 @@ RUN python3 -m venv --system-site-packages /venv && \
     pip install -U --no-cache-dir xformers --index-url https://download.pytorch.org/whl/cu121 && \
     # Clone the Automatic1111 Extensions
     git clone --depth=1 https://github.com/zanllp/sd-webui-infinite-image-browsing.git extensions/infinite-image-browsing && \
-    git clone https://github.com/Mikubill/sd-webui-controlnet.git extensions/sd-webui-controlnet && \
-    git clone --depth=1 https://github.com/Uminosachi/sd-webui-inpaint-anything.git extensions/inpaint-anything && \
     # Install dependencies for Stable Diffusion + ControlNet + Infinity Image Browsing
     pip install basicsr && \
     pip install -r requirements_versions.txt && \
     python -m install-automatic --skip-torch-cuda-test && \
-    cd /stable-diffusion/extensions/sd-webui-controlnet && \
-    pip install -r requirements.txt && \
     cd /stable-diffusion/extensions/infinite-image-browsing && \
     pip install -r requirements.txt && \
     pip cache purge && \
