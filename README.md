@@ -4,7 +4,7 @@
 
 </div>
 
-## Installs
+## Packages included
 
 * Ubuntu 22.04 LTS
 * CUDA 12.1
