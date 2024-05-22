@@ -1,8 +1,10 @@
 <div align="center">
 
 # Docker image for A1111 Stable Diffusion & Kohya_ss & JupyterLab
-
 </div>
+
+![Docker Image Version](https://img.shields.io/docker/v/darkovisual/darko-diffusion?sort=semver&arch=amd64&style=flat&logo=docker&logoColor=white&logoSize=auto&labelColor=blue&color=black)
+![Docker Image Size](https://img.shields.io/docker/image-size/darkovisual/darko-diffusion?sort=semver&arch=amd64&style=flat&logo=docker&logoColor=white&logoSize=auto&labelColor=blue&color=black)
 
 ## Packages included
 
@@ -10,7 +12,6 @@
 * CUDA 12.1
 * Python 3.10.12
 * Torch 2.1.2
-* xformers 0.0.26
 * JupyterLab
 * [Automatic1111 Stable Diffusion Web UI](
   https://github.com/AUTOMATIC1111/stable-diffusion) 1.9.3
@@ -39,7 +40,7 @@ docker run -d \
   -p 8888:8888 \
   -e JUPYTER_PASSWORD="Put your password here" \
   -e ENABLE_TENSORBOARD=1 \
-  darkovisual/darko-diffusion:1.0.3
+  darkovisual/darko-diffusion:1.0.5
 ```
 
 
