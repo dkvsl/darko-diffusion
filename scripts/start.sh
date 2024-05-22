@@ -8,15 +8,6 @@ start_nginx() {
     service nginx start
 }
 
-execute_script() {
-    local script_path=$1
-    local script_msg=$2
-    if [[ -f ${script_path} ]]; then
-        echo "${script_msg}"
-        bash ${script_path}
-    fi
-}
-
 generate_ssh_host_keys() {
     if [ ! -f /etc/ssh/ssh_host_rsa_key ]; then
         ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -q -N ''
@@ -56,6 +47,10 @@ setup_ssh() {
     cat /etc/ssh/*.pub
 }
 
+start_cron() {
+    echo "Starting Cron service..."
+    service cron start
+}
 
 start_jupyter() {
     # Default to not using a password
@@ -82,10 +77,15 @@ start_jupyter() {
     echo "Jupyter Lab started"
 }
 
-start_cron() {
-    echo "Starting Cron service..."
-    service cron start
+execute_script() {
+    local script_path=$1
+    local script_msg=$2
+    if [[ -f ${script_path} ]]; then
+        echo "${script_msg}"
+        bash ${script_path}
+    fi
 }
+
 
 # ---------------------------------------------------------------------------- #
 #                               Main Program                                   #
@@ -93,6 +93,7 @@ start_cron() {
 
 echo "Container Started, configuration in progress..."
 start_nginx
+generate_ssh_host_keys
 setup_ssh
 start_cron
 start_jupyter
