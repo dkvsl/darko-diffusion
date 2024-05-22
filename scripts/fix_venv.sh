@@ -13,5 +13,4 @@ echo "Fixing venv. Old Path: ${OLD_PATH}  New Path: ${NEW_PATH}"
 
 cd "${NEW_PATH}"/bin || exit
 sed -i "s|VIRTUAL_ENV=\"${OLD_PATH}\"|VIRTUAL_ENV=\"${NEW_PATH}\"|" activate
-# shellcheck disable=SC2035
 sed -i "s|#\!${OLD_PATH}/bin/python3|#\!${NEW_PATH}/bin/python3|" *
