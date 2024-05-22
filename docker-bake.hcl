@@ -11,15 +11,15 @@ variable "APP" {
 }
 
 variable "RELEASE" {
-    default = "1.0.3"
+    default = "1.0.5"
 }
 
 variable "BASE_IMAGE_REPOSITORY" {
-    default = "darkovisual/base-cuda121-gpu"
+    default = "darkovisual/cuda-base-docker"
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "1.0.3"
+    default = "cu121-torch221"
 }
 
 target "default" {
