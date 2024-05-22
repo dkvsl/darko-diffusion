@@ -10,22 +10,18 @@
 
 * Ubuntu 22.04 LTS
 * CUDA 12.1
-* Python 3.10.12
 * Torch 2.1.2
-* JupyterLab
-* [Automatic1111 Stable Diffusion Web UI](
-  https://github.com/AUTOMATIC1111/stable-diffusion) 1.9.3
-* [ControlNet extension](
-  https://github.com/Mikubill/sd-webui-controlnet) v1.1.445
-* [Inpaint Anything extension](https://github.com/Uminosachi/sd-webui-inpaint-anything)
-* [Infinite Image Browsing extension](https://github.com/zanllp/sd-webui-infinite-image-browsing)
-* [Kohya_ss](https://github.com/bmaltais/kohya_ss) v24.1.4
-* [sd_xl_base_1.0.safetensors](
-  https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors)
-* [cyberrealistic_v42.safetensors](
-  https://huggingface.co/cyberdelia/CyberRealistic/resolve/main/CyberRealistic_V4.2_FP16.safetensors)
-* [sdxl_vae.safetensors](
-  https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors)
+* Python 3.10.12
+* JupyterLab 4.2.0
+* A1111 Stable Diffusion WebUI 1.9.3
+* ControlNet extension v1.1.445
+* Inpaint Anything extension
+* Infinite Image Browsing extension
+* Kohya_ss v24.1.4
+* sd_xl_base_1.0.safetensors
+* sdxl_vae.safetensors
+* cyberrealistic_v42.safetensors
+* vae-ft-mse-840000-ema-pruned.safetensors
 
 ### Running Locally
 
@@ -51,7 +47,7 @@ docker run -d \
 | 3000         | 3001          | A1111 Stable Diffusion Web UI |
 | 3010         | 3011          | Kohya_ss                      |
 | 6006         | 6066          | Tensorboard                   |
-| 8000         | 8000          | Application Manager           |
+| 8000         | 8000          | App Manager                   |
 | 8888         | 8888          | Jupyter Lab                   |
 
 ### Environment Variables
