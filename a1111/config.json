@@ -183,7 +183,7 @@
     "lora_in_memory_limit": 0,
     "lora_not_found_warning_console": false,
     "lora_not_found_gradio_warning": false,
-    "cross_attention_optimization": "xformers",
+    "cross_attention_optimization": "sdp - scaled dot product",
     "s_min_uncond": 0,
     "token_merging_ratio": 0,
     "token_merging_ratio_img2img": 0,
