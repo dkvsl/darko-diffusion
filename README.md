@@ -9,8 +9,9 @@
 ## Packages included
 
 * Ubuntu 22.04 LTS
-* CUDA 12.1
+* CUDA 11.8
 * Torch 2.1.2
+* Xformers 0.0.23
 * Python 3.10.12
 * JupyterLab 4.2.0
 * A1111 Stable Diffusion WebUI 1.9.3

@@ -2,7 +2,7 @@
 
 if [ "$#" -ne 2 ]; then
   echo "Usage: $0 <OLD_VENV> <NEW_VENV>"
-  echo "   eg: $0 /venv /workspace/venv"
+  echo "   eg: $0 /venv /workspace/venvs"
   exit 1
 fi
 

@@ -11,7 +11,7 @@ variable "APP" {
 }
 
 variable "RELEASE" {
-    default = "1.0.5"
+    default = "1.0.6"
 }
 
 variable "BASE_IMAGE_REPOSITORY" {
@@ -19,7 +19,7 @@ variable "BASE_IMAGE_REPOSITORY" {
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "cu121-torch221"
+    default = "cu118-torch212"
 }
 
 target "default" {

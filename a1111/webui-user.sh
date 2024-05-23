@@ -7,7 +7,7 @@
 install_dir="/workspace"
 
 # Name of the subdirectory
-#clone_dir="stable-diffusion-webui"
+#clone_dir="stable-diffusion"
 
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
 export COMMANDLINE_ARGS="--port 3001 --skip-install --listen --api --skip-torch-cuda-test --enable-insecure-extension-access --no-half-vae"
