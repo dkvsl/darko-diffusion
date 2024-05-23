@@ -19,7 +19,7 @@ export COMMANDLINE_ARGS="--port 3001 --skip-install --listen --api --skip-torch-
 #export GIT="git"
 
 # python3 venv without trailing slash (defaults to ${install_dir}/${clone_dir}/venv)
-venv_dir=VENV_PATH
+venv_dir="/workspace/venvs/stable-diffusion"
 
 # script to launch to start the app
 #export LAUNCH_SCRIPT="launch.py"
