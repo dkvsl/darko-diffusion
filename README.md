@@ -1,6 +1,6 @@
 <div align="center">
 
-# Docker image for A1111 Stable Diffusion & Kohya_ss & JupyterLab
+# Stable Diffusion + Kohya_ss + Jupyterlab Torch 2.1.2 and Nvidia CUDA 11.8
 </div>
 
 ![Docker Image Version](https://img.shields.io/docker/v/darkovisual/darko-diffusion?sort=semver&arch=amd64&style=flat&logo=docker&logoColor=white&logoSize=auto&labelColor=blue&color=black)
