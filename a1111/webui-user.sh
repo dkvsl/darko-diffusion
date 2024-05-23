@@ -10,7 +10,7 @@ install_dir="/workspace"
 #clone_dir="stable-diffusion"
 
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
-export COMMANDLINE_ARGS="--port 3001 --skip-install --listen --api --skip-torch-cuda-test --enable-insecure-extension-access --no-half-vae"
+export COMMANDLINE_ARGS="--port 3001 --skip-install --listen --xformers --api --skip-torch-cuda-test --enable-insecure-extension-access --no-half-vae"
 
 # python3 executable
 #python_cmd="python3"
